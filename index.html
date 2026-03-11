@@ -3,23 +3,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的 GitHub.io 主页</title>
+    <title>蒋杰 | Malware Researcher | AI Security | MSc @ GZU</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 0 20px;
-            text-align: center;
+        :root {
+            --bg-0: #f5f3ee;
+            --bg-1: #eef1f6;
+            --ink-0: #101520;
+            --ink-1: #2b3747;
+            --ink-2: #4a5a6d;
+            --accent-0: #0f2b46;
+            --accent-1: #1e5f8a;
+            --accent-2: #c9a86a;
+            --card: #ffffff;
+            --border: #d7dde6;
+            --muted: #6b7a8c;
+            --shadow: 0 18px 60px rgba(15, 43, 70, 0.12);
         }
-        h1 {
-            color: #2c3e50;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink-1);
+            background: radial-gradient(900px 500px at 15% 10%, #e9e4d8 0%, transparent 60%),
+                        radial-gradient(700px 400px at 85% 5%, #dde8f5 0%, transparent 55%),
+                        linear-gradient(140deg, var(--bg-0), var(--bg-1));
+            font-family: "Source Sans 3", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            letter-spacing: 0.2px;
+            line-height: 1.7;
+        }
+
+        .page {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 72px 28px 96px;
+            position: relative;
+        }
+
+        .halo {
+            position: absolute;
+            right: -120px;
+            top: 40px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(30, 95, 138, 0.3), transparent 70%);
+            filter: blur(10px);
+            z-index: 0;
+        }
+
+        header {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 24px;
+            align-items: center;
+            grid-template-columns: minmax(0, 1fr) auto;
+        }
+
+        .title {
+            font-family: "Source Serif 4", "Noto Serif SC", "Songti SC", serif;
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 600;
+            color: var(--ink-0);
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--muted);
+            margin-top: 8px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            color: var(--ink-2);
+        }
+
+        .hero-card {
+            margin-top: 24px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 28px 32px;
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 18px;
+        }
+
+        .hero-card .headline {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent-0);
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--ink-2);
+        }
+
+        .tag {
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: #eef3f7;
+            border: 1px solid #dfe7ef;
+            font-size: 13px;
+            color: var(--accent-1);
+        }
+
+        .section {
+            margin-top: 36px;
+            display: grid;
+            gap: 18px;
+        }
+
+        .section-title {
+            font-family: "Source Serif 4", "Noto Serif SC", "Songti SC", serif;
+            font-size: 22px;
+            margin: 0;
+            color: var(--ink-0);
+        }
+
+        .section-title small {
+            display: block;
+            font-family: "Source Sans 3", "Noto Sans SC", sans-serif;
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .grid.two {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 20px 22px;
+            box-shadow: 0 12px 40px rgba(16, 21, 32, 0.08);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 17px;
+            color: var(--accent-0);
+        }
+
+        .en {
+            color: var(--muted);
+            font-size: 13.5px;
+        }
+
+        .list {
+            margin: 10px 0 0;
+            padding-left: 18px;
+        }
+
+        .list li {
+            margin-bottom: 6px;
+        }
+
+        .pill {
+            display: inline-block;
+            margin: 4px 6px 0 0;
+            padding: 6px 10px;
+            border-radius: 10px;
+            border: 1px dashed #cbd5e1;
+            color: var(--ink-2);
+            font-size: 13px;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 14px;
+        }
+
+        .timeline-item {
+            padding: 16px 18px;
+            border-left: 3px solid var(--accent-1);
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--accent-1);
+            color: var(--accent-1);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            background: transparent;
+            transition: all 0.2s ease;
+        }
+
+        .btn.primary {
+            background: var(--accent-1);
+            color: #ffffff;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(30, 95, 138, 0.18);
+        }
+
+        .footer {
+            margin-top: 48px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.08s; }
+        .delay-2 { animation-delay: 0.16s; }
+        .delay-3 { animation-delay: 0.24s; }
+        .delay-4 { animation-delay: 0.32s; }
+        .delay-5 { animation-delay: 0.4s; }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 720px) {
+            header {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>欢迎来到我的个人主页！</h1>
-    <p>这是基于 GitHub Pages 搭建的 github.io 页面 😊</p>
-    <p>我的 GitHub 地址：<a href="https://github.com/你的用户名" target="_blank">https://github.com/你的用户名</a></p>
+    <div class="page">
+        <div class="halo"></div>
+
+        <header class="reveal delay-1">
+            <div>
+                <h1 class="title">蒋杰 / sec-jay</h1>
+                <div class="subtitle">Malware Researcher | AI Security | MSc @ GZU</div>
+            </div>
+            <div class="badge">细致 · 严谨 · 乐于学习</div>
+        </header>
+
+        <section class="hero-card reveal delay-2">
+            <div class="headline">研究者简介 / Research Profile</div>
+            <div>
+                我是广州大学网络空间安全学院人工智能专业硕士研究生，研究兴趣聚焦在恶意软件生成、对抗样本生成与安全对抗。当前在探索强化学习与生成模型结合的攻击样本生成方法，并计划逐步开展逆向学习项目，建立更系统的恶意软件分析能力。
+                <div class="en">
+                    MSc student at Guangzhou University (School of Cyberspace Security). My research focuses on malware generation, adversarial sample generation, and AI security. I am exploring reinforcement learning with generative models for adversarial malware generation, and building a reverse-engineering learning project for deeper malware analysis.
+                </div>
+            </div>
+            <div class="hero-meta">
+                <span class="tag">Security</span>
+                <span class="tag">AI</span>
+                <span class="tag">Adversarial Malware</span>
+                <span class="tag">Generative Models</span>
+                <span class="tag">Reinforcement Learning</span>
+            </div>
+        </section>
+
+        <section class="section reveal delay-3">
+            <h2 class="section-title">研究方向<small>Research Interests</small></h2>
+            <div class="grid two">
+                <div class="card">
+                    <h3>恶意软件样本生成</h3>
+                    关注生成模型在恶意软件场景的有效性与可控性，探索低痕迹、高逃逸的样本生成方式。
+                    <div class="en">Focused on controllable malware generation and low-trace, high-evasion samples.</div>
+                </div>
+                <div class="card">
+                    <h3>对抗样本生成与安全对抗</h3>
+                    将强化学习与对抗生成机制结合，提升对抗样本的实用性与跨模型迁移能力。
+                    <div class="en">Combining RL and adversarial generation to improve usability and transferability.</div>
+                </div>
+                <div class="card">
+                    <h3>逆向学习计划</h3>
+                    正在构建逆向工程学习路线，强化二进制分析与恶意软件行为理解。
+                    <div class="en">Building a reverse-engineering learning roadmap for deeper binary analysis.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal delay-4">
+            <h2 class="section-title">论文与投稿<small>Publications / Under Review</small></h2>
+            <div class="grid two">
+                <div class="card">
+                    <h3>Unknown malware detection based on hyperspherical embedding and out-of-distribution sample detection</h3>
+                    <div class="muted">亮点：以超球面嵌入与置信度校准提升未知恶意软件检测鲁棒性。</div>
+                    <div class="en">Highlight: Robust OOD malware detection with hyperspherical embedding and calibrated confidence.</div>
+                    <div class="muted">Under Review · IEEE IoTJ</div>
+                    <div class="muted">问题—贡献：针对零日样本与高误报问题，提出超球面嵌入 + OOD 置信度判定的统一检测框架。</div>
+                    <div class="en">Problem–Contribution: A unified hyperspherical embedding + OOD confidence framework for zero-day detection with lower false positives.</div>
+                    <ul class="list">
+                        <li>问题：已知样本训练的检测器难以发现零日恶意软件且误报率高。</li>
+                        <li>方法：超球面嵌入 + SupCon + vMF 建模 + 马氏距离置信度判定。</li>
+                        <li>特征：融合字符串、API、操作码三类静态特征，筛选 500 个重要特征。</li>
+                        <li>评估：Family-10 已知样本 + OOD 未知样本，对比 KNN、Malconv、CIDER 等基线。</li>
+                    </ul>
+                    <div class="en">
+                        OOD malware detection with hyperspherical embedding, SupCon, vMF modeling, and Mahalanobis confidence.
+                        Multi-source static features (string/API/opcode) and benchmarked against KNN, Malconv, and CIDER.
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>An Evolutionary Strategy-Enhanced Conditional GAN for High-Evasion and Low-Trace Adversarial Malware Generation</h3>
+                    <div class="muted">亮点：ES-CGAN 在 PE 合规扰动下实现高规避与低痕迹。</div>
+                    <div class="en">Highlight: ES-CGAN achieves high evasion with minimal, PE-compliant perturbations.</div>
+                    <div class="muted">Under Review · Venue TBD</div>
+                    <div class="muted">问题—贡献：在离散字节域不可微与规避/隐蔽权衡下，提出 ES‑CGAN 双层优化生成框架。</div>
+                    <div class="en">Problem–Contribution: ES‑CGAN bridges non-differentiable byte space and evasion/stealth trade-offs via a two-level optimization framework.</div>
+                    <ul class="list">
+                        <li>问题：对抗样本在“高规避 vs 低痕迹”之间难以平衡。</li>
+                        <li>方法：ES-CGAN（CMA-ES + CGAN）双层优化，解决离散字节域不可微问题。</li>
+                        <li>扰动：PE 结构合法扰动（DOS/存根、节区空闲填充、新节区注入）。</li>
+                        <li>结果：在 VirusTotal 上峰值规避率 79.43%，平均 ASR 69.60%，PBR 低至 0.9%。</li>
+                    </ul>
+                    <div class="en">
+                        ES-CGAN with CMA-ES + CGAN for discrete PE perturbations. Achieved 79.43% peak evasion on VirusTotal,
+                        69.60% mean ASR, and 0.9% PBR.
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>基于对抗样本的恶意软件逃逸攻击研究现状</h3>
+                    <div class="muted">亮点：系统梳理对抗样本在恶意软件逃逸中的方法谱系与研究挑战。</div>
+                    <div class="en">Highlight: A systematic review of adversarial malware evasion methods and open challenges.</div>
+                    <div class="muted">Under Review · 软件学报</div>
+                    <div class="muted">问题—贡献：面对方法碎片化的现状，构建威胁模型与扰动策略的统一分类视角。</div>
+                    <div class="en">Problem–Contribution: A unified taxonomy of threat models and perturbation strategies for adversarial malware evasion.</div>
+                    <ul class="list">
+                        <li>类型：综述文章，聚焦对抗样本在恶意软件逃逸中的研究进展。</li>
+                        <li>内容：整理攻击建模、扰动策略、评估指标与防御思路。</li>
+                        <li>目标：为后续对抗研究提供体系化参考与问题地图。</li>
+                    </ul>
+                    <div class="en">
+                        Surveying threat models, perturbation strategies, evaluation metrics, and defenses
+                        for adversarial malware evasion.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal delay-4">
+            <h2 class="section-title">研究项目<small>Research Projects</small></h2>
+            <div class="grid two">
+                <div class="card">
+                    <h3>对抗样本生成实验路线</h3>
+                    <ul class="list">
+                        <li>定位：作为论文方向的实验支撑，聚焦可复用的训练与评估流程。</li>
+                        <li>进展：完成 CycleGAN 相关实验，构建基础训练脚本与对比流程。</li>
+                        <li>学习：持续拆解 DQN 代码实现，沉淀强化学习实验范式。</li>
+                    </ul>
+                    <div class="en">
+                        An experimental track to support adversarial malware research with reusable training and evaluation pipelines.
+                        Completed CycleGAN experiments; building scripts and baselines while deepening DQN implementation understanding.
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>DataCon 数据集复现实验计划</h3>
+                    <ul class="list">
+                        <li>已获取奇安信 DataCon 比赛数据集。</li>
+                        <li>计划复现基线模型并建立稳定的预处理与评估流程。</li>
+                        <li>目标是形成可复用的恶意样本分析框架。</li>
+                    </ul>
+                    <div class="en">
+                        Working on a baseline reproduction with the DataCon dataset and building a reusable malware analysis pipeline.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal delay-4">
+            <h2 class="section-title">成长路线<small>Growth Roadmap</small></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>Now</strong>：聚焦对抗样本生成与论文完善，优化实验流程与实现细节。
+                    <div class="en">Focus on adversarial malware generation and refining current papers and experiments.</div>
+                </div>
+                <div class="timeline-item">
+                    <strong>Next</strong>：完成 DataCon 数据集复现，建立稳定的样本处理与评估基线。
+                    <div class="en">Reproduce DataCon baselines and build stable preprocessing and evaluation pipelines.</div>
+                </div>
+                <div class="timeline-item">
+                    <strong>Future</strong>：系统开展逆向工程学习，强化恶意样本行为层面的理解与分析能力。
+                    <div class="en">Develop a systematic reverse-engineering learning path for deeper behavioral analysis.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal delay-4">
+            <h2 class="section-title">方法与技能<small>Methods & Skills</small></h2>
+            <div class="card">
+                <span class="pill">恶意软件分析</span>
+                <span class="pill">安全对抗</span>
+                <span class="pill">生成模型</span>
+                <span class="pill">强化学习</span>
+                <span class="pill">异常检测 / OOD</span>
+                <span class="pill">样本采集与数据处理</span>
+                <div class="en" style="margin-top: 10px;">
+                    Malware analysis, security adversarial research, generative models, reinforcement learning,
+                    OOD detection, dataset curation and preprocessing.
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal delay-5">
+            <h2 class="section-title">教育背景<small>Education</small></h2>
+            <div class="card">
+                <strong>广州大学 · 网络空间安全学院</strong>
+                <div>人工智能硕士 · 2025 - 2027（预计）</div>
+                <div class="en">MSc in Artificial Intelligence, School of Cyberspace Security, 2025 - 2027 (expected).</div>
+            </div>
+            <div class="card">
+                <strong>海南大学（211）· 土木建筑工程学院</strong>
+                <div>工程管理本科 · 2017 - 2021</div>
+                <div class="en">BEng in Engineering Management, College of Civil Engineering & Architecture, 2017 - 2021.</div>
+            </div>
+        </section>
+
+        <section class="section reveal delay-5">
+            <h2 class="section-title">联系与简历<small>Contact</small></h2>
+            <div class="card contact">
+                <div><strong>Email</strong>：2112433088@e.gzhu.edu.cn</div>
+                <a class="btn" href="#">GitHub (placeholder)</a>
+                <a class="btn" href="#">Google Scholar (placeholder)</a>
+                <a class="btn primary" href="#">Download CV (placeholder)</a>
+            </div>
+        </section>
+
+        <div class="footer reveal delay-5">
+            Last updated: 2026-03-11 · Built with GitHub Pages
+        </div>
+    </div>
 </body>
 </html>
