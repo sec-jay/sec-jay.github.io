@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>蒋杰 | Malware Researcher | AI Security | MSc @ GZU</title>
+    <title>蒋杰 | sec-jay | Malware Researcher | AI Security | MSc @ GZU</title>
     <style>
         :root {
             --bg-0: #f5f3ee;
@@ -33,6 +33,10 @@
             font-family: "Source Sans 3", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
             letter-spacing: 0.2px;
             line-height: 1.7;
+        }
+
+        a {
+            color: var(--accent-1);
         }
 
         .page {
@@ -282,15 +286,24 @@
                 <h1 class="title">蒋杰 / sec-jay</h1>
                 <div class="subtitle">Malware Researcher | AI Security | MSc @ GZU</div>
             </div>
-            <div class="badge">细致 · 严谨 · 乐于学习</div>
+            <div class="badge">认真 · 严谨 · 持续学习</div>
         </header>
 
         <section class="hero-card reveal delay-2">
-            <div class="headline">研究者简介 / Research Profile</div>
+            <div class="headline">关于我 / About Me</div>
             <div>
-                我是广州大学网络空间安全学院人工智能专业硕士研究生，研究兴趣聚焦在恶意软件生成、对抗样本生成与安全对抗。当前在探索强化学习与生成模型结合的攻击样本生成方法，并计划逐步开展逆向学习项目，建立更系统的恶意软件分析能力。
+                我是广州大学网络空间安全学院人工智能方向硕士生，研究位于恶意软件研究与 AI 安全的交叉点。当前主要关注恶意软件生成、对抗样本生成、分布外检测，以及生成模型和强化学习在安全研究中的实际应用。
                 <div class="en">
-                    MSc student at Guangzhou University (School of Cyberspace Security). My research focuses on malware generation, adversarial sample generation, and AI security. I am exploring reinforcement learning with generative models for adversarial malware generation, and building a reverse-engineering learning project for deeper malware analysis.
+                    I am an MSc student at Guangzhou University, School of Cyberspace Security, working at the intersection
+                    of malware research and AI security. My current work centers on malware generation, adversarial sample generation,
+                    out-of-distribution detection, and the practical use of generative models and reinforcement learning in security research.
+                </div>
+            </div>
+            <div>
+                这个主页会逐步从“工作 / 专业 brag document”扩展成一个更完整的个人主页，同时也记录我如何学习、成长，并建立支撑长期工作的生活方式。
+                <div class="en">
+                    This profile is gradually becoming a more complete personal homepage: first as a clear work / professional brag document,
+                    and over time as a place that also reflects how I learn, grow, and build a sustainable life around the work.
                 </div>
             </div>
             <div class="hero-meta">
@@ -303,144 +316,174 @@
         </section>
 
         <section class="section reveal delay-3">
-            <h2 class="section-title">研究方向<small>Research Interests</small></h2>
+            <h2 class="section-title">工作 / 专业亮点<small>Work / Professional Highlights</small></h2>
             <div class="grid two">
                 <div class="card">
-                    <h3>恶意软件样本生成</h3>
-                    关注生成模型在恶意软件场景的有效性与可控性，探索低痕迹、高逃逸的样本生成方式。
-                    <div class="en">Focused on controllable malware generation and low-trace, high-evasion samples.</div>
+                    <h3>研究方向 / Research Interests</h3>
+                    <ul class="list">
+                        <li>恶意软件生成：关注生成结果的可控性、真实性，以及低痕迹、高规避样本构造</li>
+                        <li>对抗样本生成与安全对抗：特别关注强化学习与对抗生成的结合</li>
+                        <li>逆向学习路线：作为长期方向，持续加强二进制分析与恶意软件行为理解</li>
+                    </ul>
+                    <div class="en">
+                        Malware generation with emphasis on controllability and realism; adversarial generation combined with reinforcement learning;
+                        and long-term reverse-engineering growth for stronger binary analysis.
+                    </div>
                 </div>
                 <div class="card">
-                    <h3>对抗样本生成与安全对抗</h3>
-                    将强化学习与对抗生成机制结合，提升对抗样本的实用性与跨模型迁移能力。
-                    <div class="en">Combining RL and adversarial generation to improve usability and transferability.</div>
-                </div>
-                <div class="card">
-                    <h3>逆向学习计划</h3>
-                    正在构建逆向工程学习路线，强化二进制分析与恶意软件行为理解。
-                    <div class="en">Building a reverse-engineering learning roadmap for deeper binary analysis.</div>
+                    <h3>方法与技能 / Methods &amp; Skills</h3>
+                    <span class="pill">恶意软件分析 / Malware analysis</span>
+                    <span class="pill">安全对抗 / Adversarial security</span>
+                    <span class="pill">生成模型 / Generative models</span>
+                    <span class="pill">强化学习 / Reinforcement learning</span>
+                    <span class="pill">OOD 检测 / OOD detection</span>
+                    <span class="pill">数据预处理 / Dataset curation</span>
+                    <div class="en" style="margin-top: 10px;">
+                        Malware analysis, security adversarial research, generative models, reinforcement learning,
+                        OOD detection, and dataset curation / preprocessing.
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="section reveal delay-4">
-            <h2 class="section-title">论文与投稿<small>Publications / Under Review</small></h2>
+            <h2 class="section-title">论文与在投工作<small>Publications / Under Review</small></h2>
             <div class="grid two">
                 <div class="card">
                     <h3>Unknown malware detection based on hyperspherical embedding and out-of-distribution sample detection</h3>
-                    <div class="muted">亮点：以超球面嵌入与置信度校准提升未知恶意软件检测鲁棒性。</div>
+                    <div class="muted">状态：在投，IEEE IoTJ</div>
+                    <div class="en">Status: Under Review, IEEE IoTJ</div>
+                    <div class="muted">亮点：基于超球面嵌入与置信度校准的稳健 OOD 恶意软件检测。</div>
                     <div class="en">Highlight: Robust OOD malware detection with hyperspherical embedding and calibrated confidence.</div>
-                    <div class="muted">Under Review · IEEE IoTJ</div>
-                    <div class="muted">问题—贡献：针对零日样本与高误报问题，提出超球面嵌入 + OOD 置信度判定的统一检测框架。</div>
-                    <div class="en">Problem–Contribution: A unified hyperspherical embedding + OOD confidence framework for zero-day detection with lower false positives.</div>
+                    <div class="muted">贡献：提出统一的超球面嵌入 + OOD 置信度框架，用于零日检测并降低误报。</div>
+                    <div class="en">Contribution: A unified hyperspherical embedding + OOD confidence framework for zero-day detection with lower false positives.</div>
                     <ul class="list">
-                        <li>问题：已知样本训练的检测器难以发现零日恶意软件且误报率高。</li>
-                        <li>方法：超球面嵌入 + SupCon + vMF 建模 + 马氏距离置信度判定。</li>
-                        <li>特征：融合字符串、API、操作码三类静态特征，筛选 500 个重要特征。</li>
-                        <li>评估：Family-10 已知样本 + OOD 未知样本，对比 KNN、Malconv、CIDER 等基线。</li>
+                        <li>方法：超球面嵌入、`SupCon`、`vMF` 建模、Mahalanobis 置信度判定</li>
+                        <li>特征：融合字符串、API、opcode 等多源静态特征，并进行重点特征筛选</li>
+                        <li>评估：与 `KNN`、`Malconv`、`CIDER` 等基线进行对比</li>
                     </ul>
                     <div class="en">
-                        OOD malware detection with hyperspherical embedding, SupCon, vMF modeling, and Mahalanobis confidence.
-                        Multi-source static features (string/API/opcode) and benchmarked against KNN, Malconv, and CIDER.
+                        Method: hyperspherical embedding, `SupCon`, `vMF` modeling, and Mahalanobis-confidence-based detection.
+                        Evaluated with multi-source static features against `KNN`, `Malconv`, and `CIDER`.
                     </div>
                 </div>
+
                 <div class="card">
                     <h3>An Evolutionary Strategy-Enhanced Conditional GAN for High-Evasion and Low-Trace Adversarial Malware Generation</h3>
-                    <div class="muted">亮点：ES-CGAN 在 PE 合规扰动下实现高规避与低痕迹。</div>
+                    <div class="muted">状态：在投，期刊 / 会议待定</div>
+                    <div class="en">Status: Under Review, venue TBD</div>
+                    <div class="muted">亮点：ES-CGAN 在保持 PE 合规扰动的前提下实现高规避与低痕迹。</div>
                     <div class="en">Highlight: ES-CGAN achieves high evasion with minimal, PE-compliant perturbations.</div>
-                    <div class="muted">Under Review · Venue TBD</div>
-                    <div class="muted">问题—贡献：在离散字节域不可微与规避/隐蔽权衡下，提出 ES‑CGAN 双层优化生成框架。</div>
-                    <div class="en">Problem–Contribution: ES‑CGAN bridges non-differentiable byte space and evasion/stealth trade-offs via a two-level optimization framework.</div>
+                    <div class="muted">贡献：提出双层优化框架，在不可微字节空间中平衡规避率与隐蔽性。</div>
+                    <div class="en">Contribution: A two-level optimization framework bridging non-differentiable byte space with evasion / stealth trade-offs.</div>
                     <ul class="list">
-                        <li>问题：对抗样本在“高规避 vs 低痕迹”之间难以平衡。</li>
-                        <li>方法：ES-CGAN（CMA-ES + CGAN）双层优化，解决离散字节域不可微问题。</li>
-                        <li>扰动：PE 结构合法扰动（DOS/存根、节区空闲填充、新节区注入）。</li>
-                        <li>结果：在 VirusTotal 上峰值规避率 79.43%，平均 ASR 69.60%，PBR 低至 0.9%。</li>
+                        <li>方法：`CMA-ES + CGAN`，面向离散 PE 扰动生成</li>
+                        <li>结果：VirusTotal 上达到 `79.43%` 峰值规避率、`69.60%` 平均 ASR、`0.9%` PBR</li>
+                        <li>扰动设计：DOS / header 修改、节空间填充和新节注入，保持 PE 结构约束</li>
                     </ul>
                     <div class="en">
-                        ES-CGAN with CMA-ES + CGAN for discrete PE perturbations. Achieved 79.43% peak evasion on VirusTotal,
-                        69.60% mean ASR, and 0.9% PBR.
+                        Method: `CMA-ES + CGAN` for discrete PE perturbations.
+                        Result: `79.43%` peak evasion on VirusTotal, `69.60%` mean ASR, and `0.9%` PBR.
                     </div>
                 </div>
+
                 <div class="card">
-                    <h3>基于对抗样本的恶意软件逃逸攻击研究现状</h3>
-                    <div class="muted">亮点：系统梳理对抗样本在恶意软件逃逸中的方法谱系与研究挑战。</div>
+                    <h3>基于对抗样本的恶意软件逃逸研究 / Research on adversarial-sample-based malware evasion</h3>
+                    <div class="muted">状态：在投，《软件学报》</div>
+                    <div class="en">Status: Under Review, Journal of Software</div>
+                    <div class="muted">亮点：系统梳理对抗恶意软件逃逸方法与开放挑战。</div>
                     <div class="en">Highlight: A systematic review of adversarial malware evasion methods and open challenges.</div>
-                    <div class="muted">Under Review · 软件学报</div>
-                    <div class="muted">问题—贡献：面对方法碎片化的现状，构建威胁模型与扰动策略的统一分类视角。</div>
-                    <div class="en">Problem–Contribution: A unified taxonomy of threat models and perturbation strategies for adversarial malware evasion.</div>
+                    <div class="muted">贡献：构建对抗恶意软件逃逸中的威胁模型与扰动策略统一分类框架。</div>
+                    <div class="en">Contribution: A unified taxonomy of threat models and perturbation strategies for adversarial malware evasion.</div>
                     <ul class="list">
-                        <li>类型：综述文章，聚焦对抗样本在恶意软件逃逸中的研究进展。</li>
-                        <li>内容：整理攻击建模、扰动策略、评估指标与防御思路。</li>
-                        <li>目标：为后续对抗研究提供体系化参考与问题地图。</li>
+                        <li>覆盖内容：攻击构造、扰动策略、评估指标与防御方向</li>
+                        <li>目标：为后续对抗恶意软件研究提供结构化参考与问题地图</li>
                     </ul>
                     <div class="en">
-                        Surveying threat models, perturbation strategies, evaluation metrics, and defenses
-                        for adversarial malware evasion.
+                        Coverage includes attack construction, perturbation strategies, evaluation metrics, and defense directions.
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="section reveal delay-4">
-            <h2 class="section-title">研究项目<small>Research Projects</small></h2>
+            <h2 class="section-title">代表性工作 / 影响<small>Selected Work / Impact</small></h2>
             <div class="grid two">
                 <div class="card">
-                    <h3>对抗样本生成实验路线</h3>
+                    <h3>对抗恶意软件生成实验路线 / Adversarial malware generation experiment track</h3>
                     <ul class="list">
-                        <li>定位：作为论文方向的实验支撑，聚焦可复用的训练与评估流程。</li>
-                        <li>进展：完成 CycleGAN 相关实验，构建基础训练脚本与对比流程。</li>
-                        <li>学习：持续拆解 DQN 代码实现，沉淀强化学习实验范式。</li>
+                        <li>作为对抗恶意软件研究的可复用实验支撑线持续建设</li>
+                        <li>已完成 `CycleGAN` 相关实验，并建立基础训练与评估脚本</li>
+                        <li>持续拆解 `DQN` 实现，强化对强化学习实验范式的理解</li>
                     </ul>
                     <div class="en">
-                        An experimental track to support adversarial malware research with reusable training and evaluation pipelines.
-                        Completed CycleGAN experiments; building scripts and baselines while deepening DQN implementation understanding.
+                        A reusable experimental track supporting adversarial malware research,
+                        including `CycleGAN` experiments, baseline scripts, and ongoing `DQN` implementation study.
                     </div>
                 </div>
+
                 <div class="card">
-                    <h3>DataCon 数据集复现实验计划</h3>
+                    <h3>DataCon 数据集复现实验计划 / DataCon dataset reproduction plan</h3>
                     <ul class="list">
-                        <li>已获取奇安信 DataCon 比赛数据集。</li>
-                        <li>计划复现基线模型并建立稳定的预处理与评估流程。</li>
-                        <li>目标是形成可复用的恶意样本分析框架。</li>
+                        <li>已获取奇安信 `DataCon` 比赛数据集</li>
+                        <li>正在复现基线模型，并搭建更稳定的预处理与评估流程</li>
+                        <li>目标是形成可复用的恶意软件分析工作流</li>
                     </ul>
                     <div class="en">
-                        Working on a baseline reproduction with the DataCon dataset and building a reusable malware analysis pipeline.
+                        Reproducing baseline models with the Qi An Xin `DataCon` dataset and building a reusable malware analysis workflow.
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="section reveal delay-4">
-            <h2 class="section-title">成长路线<small>Growth Roadmap</small></h2>
+            <h2 class="section-title">当前重点<small>Current Focus</small></h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <strong>Now</strong>：聚焦对抗样本生成与论文完善，优化实验流程与实现细节。
-                    <div class="en">Focus on adversarial malware generation and refining current papers and experiments.</div>
+                    <strong>Now / 现在</strong>
+                    <div>打磨在投论文，提升实验质量与实现细节。</div>
+                    <div class="en">Refining current papers and improving experiment quality and implementation details.</div>
                 </div>
                 <div class="timeline-item">
-                    <strong>Next</strong>：完成 DataCon 数据集复现，建立稳定的样本处理与评估基线。
-                    <div class="en">Reproduce DataCon baselines and build stable preprocessing and evaluation pipelines.</div>
+                    <strong>Next / 接下来</strong>
+                    <div>复现 `DataCon` 基线并稳定预处理 / 评估流程。</div>
+                    <div class="en">Reproducing `DataCon` baselines and stabilizing preprocessing / evaluation workflows.</div>
                 </div>
                 <div class="timeline-item">
-                    <strong>Future</strong>：系统开展逆向工程学习，强化恶意样本行为层面的理解与分析能力。
-                    <div class="en">Develop a systematic reverse-engineering learning path for deeper behavioral analysis.</div>
+                    <strong>Longer-term / 长期</strong>
+                    <div>建立系统化的逆向学习路径，深化恶意软件行为分析能力。</div>
+                    <div class="en">Building a systematic reverse-engineering learning path for deeper malware behavior analysis.</div>
                 </div>
             </div>
         </section>
 
         <section class="section reveal delay-4">
-            <h2 class="section-title">方法与技能<small>Methods & Skills</small></h2>
-            <div class="card">
-                <span class="pill">恶意软件分析</span>
-                <span class="pill">安全对抗</span>
-                <span class="pill">生成模型</span>
-                <span class="pill">强化学习</span>
-                <span class="pill">异常检测 / OOD</span>
-                <span class="pill">样本采集与数据处理</span>
-                <div class="en" style="margin-top: 10px;">
-                    Malware analysis, security adversarial research, generative models, reinforcement learning,
-                    OOD detection, dataset curation and preprocessing.
+            <h2 class="section-title">工作之外：生活、学习与成长<small>Beyond Work / Life, Learning &amp; Growth</small></h2>
+            <div class="grid two">
+                <div class="card">
+                    <h3>轻量但重要的第二条线 / A secondary but meaningful thread</h3>
+                    <ul class="list">
+                        <li>在工作之外继续认真学习，慢慢扩展自己的视野</li>
+                        <li>建立支持长期深度工作的生活技能与可持续习惯</li>
+                        <li>发展研究之外的创造性与反思性实践</li>
+                        <li>记录细小但真实的个人成长</li>
+                    </ul>
+                    <div class="en">
+                        Learning beyond work, building sustainable routines, developing reflective and creative practices,
+                        and documenting small but meaningful personal growth over time.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>未来页面 / Future Pages</h3>
+                    <ul class="list">
+                        <li><a href="./work-brag-document.md">work-brag-document.md</a></li>
+                        <li><a href="./life-brag-document.md">life-brag-document.md</a></li>
+                        <li><a href="./now.md">now.md</a></li>
+                    </ul>
+                    <div class="en">
+                        Placeholder pages for a fuller work brag document, life brag document, and a living now page.
+                    </div>
                 </div>
             </div>
         </section>
@@ -450,27 +493,27 @@
             <div class="card">
                 <strong>广州大学 · 网络空间安全学院</strong>
                 <div>人工智能硕士 · 2025 - 2027（预计）</div>
-                <div class="en">MSc in Artificial Intelligence, School of Cyberspace Security, 2025 - 2027 (expected).</div>
+                <div class="en">Guangzhou University, School of Cyberspace Security. MSc in Artificial Intelligence, 2025 - 2027 (expected).</div>
             </div>
             <div class="card">
-                <strong>海南大学（211）· 土木建筑工程学院</strong>
+                <strong>海南大学 · 土木建筑工程学院</strong>
                 <div>工程管理本科 · 2017 - 2021</div>
-                <div class="en">BEng in Engineering Management, College of Civil Engineering & Architecture, 2017 - 2021.</div>
+                <div class="en">Hainan University, College of Civil Engineering &amp; Architecture. BEng in Engineering Management, 2017 - 2021.</div>
             </div>
         </section>
 
         <section class="section reveal delay-5">
-            <h2 class="section-title">联系与简历<small>Contact</small></h2>
+            <h2 class="section-title">联系 / Connect<small>Contact</small></h2>
             <div class="card contact">
-                <div><strong>Email</strong>：2112433088@e.gzhu.edu.cn</div>
-                <a class="btn" href="#">GitHub (placeholder)</a>
-                <a class="btn" href="#">Google Scholar (placeholder)</a>
-                <a class="btn primary" href="#">Download CV (placeholder)</a>
+                <div><strong>Email</strong>: 2112433088@e.gzhu.edu.cn</div>
+                <a class="btn" href="https://github.com/sec-jay">GitHub / sec-jay</a>
+                <a class="btn" href="#">Google Scholar / 持续完善中</a>
+                <a class="btn primary" href="#">CV / 后续补充链接</a>
             </div>
         </section>
 
         <div class="footer reveal delay-5">
-            Last updated: 2026-03-11 · Built with GitHub Pages
+            Last updated: 2026-03-15 · Built with GitHub Pages
         </div>
     </div>
 </body>
